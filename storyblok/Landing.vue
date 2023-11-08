@@ -1,7 +1,8 @@
+<!-- TODO: Button component -->
 <template>
   <div
     v-editable="blok"
-    class="container flex flex-col md:flex-row justify-center md:justify-stretch items-center"
+    class="container flex flex-col md:flex-row justify-center md:justify-stretch"
   >
     <div class="flex-1 space-y-9">
       <div class="lg:max-w-[80%] space-y-6 md:space-y-0">
