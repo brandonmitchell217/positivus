@@ -1,7 +1,8 @@
 <template>
   <div v-editable="blok">
     <div
-      class="container px-[60px] py-16 rounded-[45px] bg-dark text-white flex justify-between items-center"
+      v-if="isMobile"
+      class="container mb-[60px] lg:mb-[140px] md:px-[60px] md:py-16 rounded-[45px] md:bg-dark text-white flex justify-center gap-4 md:gap-0 md:justify-between items-center"
     >
       <StoryblokComponent
         v-for="blok in blok.flexbox"
@@ -9,28 +10,41 @@
         :blok="blok"
       />
     </div>
+
+    <div v-if="!isMobile" class="pl-8 max-w-[200%]">
+      <Swiper :slides-per-view="1.5" :mousewheel="true" :simulate-touch="true">
+        <SwiperSlide v-for="blok in blok.flexbox" :key="blok._uid">
+          <StoryblokComponent :blok="blok" />
+        </SwiperSlide>
+      </Swiper>
+    </div>
   </div>
 </template>
 
 <script setup>
+import { Swiper, SwiperSlide } from "swiper/vue";
+import "swiper/css";
+import { useMediaQuery } from "@vueuse/core";
 defineProps({ blok: Object });
+const isMobile = useMediaQuery("(min-width: 640px)");
 </script>
 
 <style scoped lang="scss">
 .caseStudy {
   position: relative;
 
-  &:nth-of-type(1)::before,
-  &:nth-of-type(2)::before {
-    content: "";
-    position: absolute;
-    right: -23%;
-    top: 0;
-    transform: translateX(23%);
-    height: 100%;
-    width: 2px;
-    border-radius: 20px;
-    background-color: #ffffff;
+  @media (min-width: 768px) {
+    &:not(:last-of-type)::before {
+      content: "";
+      position: absolute;
+      right: -23%;
+      top: 0;
+      transform: translateX(23%);
+      height: 100%;
+      width: 2px;
+      border-radius: 20px;
+      background-color: #ffffff;
+    }
   }
 }
 </style>

@@ -1,4 +1,4 @@
-<!-- TODO: Title background color field, 2 different fields for title(two lines) -->
+<!-- TODO: Title background color field, 2 different fields for title(two lines), image/layout on mobile -->
 <template>
   <div
     v-editable="blok"
