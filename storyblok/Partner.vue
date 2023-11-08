@@ -15,7 +15,7 @@ const split = computed(() => {
 <template>
   <div
     v-editable="blok"
-    class="container py-12 flex flex-col md:flex-row gap-4 lg:gap-12 justify-center items-center"
+    class="container py-[60px] lg:pt-[70px] lg:pb-[140px] flex flex-col md:flex-row gap-4 lg:gap-24 justify-center items-center"
   >
     <div
       class="-mr-[25%] xs:m-0 w-[110%] md:w-1/2 md:gap-6 lg:gap-0 flex justify-between items-center"
