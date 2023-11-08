@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+$green: #b9ff66;
+$dark: #191a23;
+$grey: #f3f3f3;
+
+@layer base {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-medium;
+  }
+
+  a,
+  button {
+    cursor: pointer;
+  }
+}
