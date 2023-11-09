@@ -1,8 +1,8 @@
 <template>
-  <div v-editable="blok">
+  <div v-editable="blok" class="mb-[60px] lg:mb-[140px]">
     <div
       v-if="isMobile"
-      class="container mb-[60px] lg:mb-[140px] md:px-[60px] md:py-16 rounded-[45px] md:bg-dark text-white flex justify-center gap-4 md:gap-0 md:justify-between items-center"
+      class="container md:px-[60px] md:py-16 rounded-[45px] md:bg-dark text-white flex justify-center gap-4 md:gap-0 md:justify-between items-center"
     >
       <StoryblokComponent
         v-for="blok in blok.flexbox"
