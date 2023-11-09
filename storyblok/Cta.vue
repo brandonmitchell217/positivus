@@ -2,7 +2,7 @@
 <template>
   <div v-editable="blok">
     <div
-      class="my-24 container bg-grey rounded-[45px] flex flex-col lg:flex-row justify-between items-center"
+      class="mt-24 container bg-grey rounded-[45px] flex flex-col lg:flex-row justify-between items-center"
     >
       <div class="max-w-[500px] m-[60px] space-y-6">
         <h4 class="text-3xl">{{ blok.title }}</h4>

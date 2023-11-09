@@ -1,5 +1,5 @@
 <template>
-  <div v-editable="blok" class="mb-[60px] lg:mb-[140px]">
+  <div v-editable="blok">
     <div
       v-if="isMobile"
       class="container md:px-[60px] md:py-16 rounded-[45px] md:bg-dark text-white flex justify-center gap-4 md:gap-0 md:justify-between items-center"

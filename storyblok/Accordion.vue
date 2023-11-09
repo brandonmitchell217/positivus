@@ -2,7 +2,9 @@
 <template>
   <div
     v-editable="blok"
-    class="w-full accordionBox p-[30px] lg:py-[41px] lg:px-[60px] bg-grey border border-dark rounded-[45px] cursor-pointer"
+    :class="`w-full accordionBox p-[30px] lg:py-[41px] lg:px-[60px] border border-dark rounded-[45px] cursor-pointer transition-all ${
+      isOpen ? 'bg-green' : 'bg-grey'
+    }`"
     @click="isOpen = !isOpen"
   >
     <div class="flex justify-between items-center">
