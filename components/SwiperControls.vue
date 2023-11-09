@@ -46,7 +46,7 @@ const swiper = useSwiper();
     </button>
   </div>
 </template>
-TODO: Figure out how to either make this look better with background-image or
+<!-- TODO: Figure out how to either make this look better with background-image or use svg -->
 <style lang="scss">
 .swiper-pagination {
   max-width: 300px;
