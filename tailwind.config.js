@@ -30,6 +30,9 @@ module.exports = {
         "4.5xl": "2.5rem",
         "43mob": "2.688rem",
       },
+      borderRadius: {
+        "45xl": "2.813rem",
+      },
     },
   },
   corePlugins: {

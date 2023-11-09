@@ -1,6 +1,6 @@
 <!-- TODO: Button component -->
 <template>
-  <div
+  <section
     v-editable="blok"
     class="container flex flex-col md:flex-row justify-center md:justify-stretch"
   >
@@ -42,7 +42,7 @@
         >{{ blok.cta_text }}</a
       >
     </div>
-  </div>
+  </section>
 </template>
 
 <script setup>
