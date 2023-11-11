@@ -11,12 +11,19 @@
         {{ props.blok.title }}
       </h2>
 
-      <!-- <div v-html="description"></div> -->
+      <div v-html="description"></div>
     </div>
   </div>
 </template>
 
 <script setup>
 const props = defineProps({ blok: Object });
-// const description = computed(() => renderRichText(props.blok.description));
+
+const description = computed(() => {
+  if (props.blok.description.content) {
+    return props.blok.description.content[0].content[0].text;
+  } else {
+    return props.blok.description;
+  }
+});
 </script>
