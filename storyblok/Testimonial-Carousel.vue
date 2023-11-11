@@ -23,7 +23,7 @@
           slidesPerView: 1.75,
         },
         1024: {
-          slidesPerView: 1.25,
+          slidesPerView: 1.55,
         },
         1280: {
           slidesPerView: 1.75,

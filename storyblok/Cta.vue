@@ -1,4 +1,3 @@
-<!-- TODO: Button component -->
 <template>
   <div v-editable="blok">
     <div
@@ -8,10 +7,10 @@
         <h4 class="text-3xl">{{ blok.title }}</h4>
         <p>{{ blok.description }}</p>
         <div>
-          <a
+          <AppButton
             v-bind:href="blok.cta_link.url || '/'"
-            class="bg-dark text-white py-5 px-8 rounded-[14px] text-center block lg:inline-block"
-            >{{ blok.cta_text }}</a
+            className="bg-dark text-white text-center block lg:inline-block hover:text-dark hover:bg-transparent"
+            >{{ blok.cta_text }}</AppButton
           >
         </div>
       </div>

@@ -1,22 +1,17 @@
-<!-- TODO: Button component -->
-<script setup>
-const isOpen = ref(false);
-</script>
-
 <template>
   <nav class="pt-[60px] text-dark">
     <div class="container flex justify-between items-center">
       <a href="/">
         <img
           src="/logo_nav.svg"
-          alt="logo for positivus"
+          alt="Positivus Logo"
           class="max-w-[140px] md:max-w-none block"
         />
       </a>
 
       <div
         aria-label="menu button"
-        class="text-dark md:hidden cursor-pointer"
+        class="text-dark lg:hidden cursor-pointer"
         @click="isOpen = true"
       >
         <svg
@@ -32,7 +27,7 @@ const isOpen = ref(false);
         </svg>
       </div>
 
-      <ul class="hidden lg:flex gap-10 items-center">
+      <ul class="desktopNav hidden lg:flex gap-10 items-center">
         <li>
           <a>About us</a>
         </li>
@@ -49,9 +44,10 @@ const isOpen = ref(false);
           <a>Blog</a>
         </li>
         <li>
-          <a
-            class="bg-transparent border border-dark text-dark py-5 px-8 rounded-[14px]"
-            >Request a Quote</a
+          <AppButton
+            href="/"
+            className="bg-transparent text-dark hover:bg-dark hover:text-white"
+            >Request a Quote</AppButton
           >
         </li>
       </ul>
@@ -79,7 +75,17 @@ const isOpen = ref(false);
           />
         </svg>
       </div>
+
       <ul class="flex gap-10 items-center flex-col">
+        <li class="mb-12">
+          <a href="/">
+            <img
+              src="/logo_footer.svg"
+              alt="Positivus Logo"
+              class="max-w-[180px] md:max-w-none block"
+            />
+          </a>
+        </li>
         <li>
           <a>About us</a>
         </li>
@@ -95,12 +101,24 @@ const isOpen = ref(false);
         <li>
           <a>Blog</a>
         </li>
-        <li>
-          <a class="bg-white text-dark py-5 px-8 rounded-[14px]"
-            >Request a Quote</a
+        <li class="mt-4">
+          <AppButton href="/" className="bg-white text-dark"
+            >Request a Quote</AppButton
           >
         </li>
       </ul>
     </div>
   </nav>
 </template>
+
+<script setup>
+const isOpen = ref(false);
+</script>
+
+<style scoped lang="scss">
+.desktopNav {
+  a:not(.appBtn) {
+    @apply hover:text-dark/70;
+  }
+}
+</style>

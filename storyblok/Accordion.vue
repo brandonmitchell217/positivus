@@ -1,8 +1,7 @@
-<!-- TODO: Have ai write better descriptions -->
 <template>
   <div
     v-editable="blok"
-    :class="`w-full accordionBox p-[30px] lg:py-[41px] lg:px-[60px] border border-dark rounded-[45px] cursor-pointer transition-all ${
+    :class="`w-full accordionBox p-[30px] lg:py-[41px] lg:px-[60px] border border-dark rounded-[45px] cursor-pointer group transition-all duration-300 ease-in-out ${
       isOpen ? 'bg-green' : 'bg-grey'
     }`"
     @click="isOpen = !isOpen"
@@ -37,7 +36,14 @@
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
         >
-          <circle cx="29" cy="29.5" r="28.5" fill="#F3F3F3" stroke="#191A23" />
+          <circle
+            cx="29"
+            cy="29.5"
+            r="28.5"
+            fill="#F3F3F3"
+            stroke="#191A23"
+            class="group-hover:fill-transparent transition-all duration-250 ease-in-out"
+          />
           <path d="M20 32.14V26.5H37.76V32.14H20Z" fill="black" />
         </svg>
       </div>

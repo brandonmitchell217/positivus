@@ -1,7 +1,7 @@
 <template>
   <div v-editable="blok" class="container">
     <div
-      class="relative bg-grey rounded-45xl py-[62.5px] px-[100px] flex overflow-hidden"
+      class="relative bg-grey rounded-45xl py-[62.5px] px-9 sm:px-[50px] md:px-[100px] flex overflow-hidden"
     >
       <form class="w-full md:w-1/2 max-w-[559px] space-y-10">
         <div class="flex justify-between md:justify-stretch items-center gap-8">
@@ -11,7 +11,8 @@
               type="radio"
               id="messageCheck"
               name="messageCheck"
-              class="h-6 w-6 checked:focus:bg-white hover:border-black checked:hover:bg-dark hover:bg-green checked:bg-green checked:border checked:border-black"
+              checked
+              class="h-6 w-6"
             />
           </div>
           <div class="flex flex-row-reverse gap-3.5 items-center">
@@ -20,7 +21,7 @@
               type="radio"
               id="quoteCheck"
               name="messageCheck"
-              class="h-6 w-6 checked:focus:bg-white hover:border-black checked:hover:bg-dark checked:bg-green checked:border checked:border-black"
+              class="h-6 w-6"
             />
           </div>
         </div>
@@ -72,12 +73,11 @@
             </div>
           </div>
 
-          <button
-            type="button"
-            class="bg-dark text-white py-5 px-8 rounded-[14px] w-full hidden md:inline-block"
+          <AppButton
+            type="submit"
+            className="bg-dark text-white w-full hidden md:inline-block hover:bg-transparent hover:text-dark"
+            >Send Message</AppButton
           >
-            Send Message
-          </button>
         </div>
       </form>
 
@@ -150,15 +150,44 @@
         </svg>
       </div>
     </div>
-    <button
-      type="button"
-      class="bg-dark text-white py-5 px-8 rounded-[14px] w-full md:hidden mt-[30px]"
+
+    <AppButton
+      type="submit"
+      className="bg-dark text-white w-full md:hidden mt-[30px] hover:bg-transparent hover:text-dark"
+      >Send Message</AppButton
     >
-      Send Message
-    </button>
   </div>
 </template>
 
 <script setup>
 defineProps({ blok: Object });
 </script>
+
+<style scoped lang="scss">
+#messageCheck,
+#quoteCheck {
+  @apply relative border border-dark;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 21%;
+    left: 21%;
+    transform: translate(-21%, -21%);
+    width: 60%;
+    height: 60%;
+    border-radius: 50%;
+    transform: scale(0);
+
+    @apply bg-green border border-darkAlt transition-all duration-300 ease-in-out;
+  }
+
+  &:checked {
+    @apply bg-white;
+  }
+
+  &:checked::before {
+    @apply scale-100;
+  }
+}
+</style>

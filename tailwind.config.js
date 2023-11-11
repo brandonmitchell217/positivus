@@ -23,6 +23,7 @@ module.exports = {
       colors: {
         green: "#B9FF66",
         dark: "#191A23",
+        darkAlt: "#292A32",
         grey: "#F3F3F3",
       },
       fontSize: {
