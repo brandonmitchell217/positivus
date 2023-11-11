@@ -3,7 +3,11 @@
     <div
       class="testimonial-bubble p-9 pb-[57px] md:px-[52px] md:pt-12 md:pb-[80px] flex justify-center items-center"
     >
-      <p class="text-base lg:text-lg leading-tight">{{ blok.testimonial }}</p>
+      <p
+        class="text-base leading-normal h-full overflow-y-scroll lg:overflow-y-visible"
+      >
+        {{ blok.testimonial }}
+      </p>
     </div>
 
     <div class="w-[88%] flex flex-col self-end">

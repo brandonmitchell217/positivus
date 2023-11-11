@@ -3,8 +3,6 @@ import { computed } from "vue";
 
 const { blok } = defineProps({ blok: Object });
 
-// const firstThree = computed(() => blok.partners.slice(0, 3));
-// const lastThree = computed(() => blok.partners.slice(3, 6));
 const split = computed(() => {
   const firstThree = blok.partners.slice(0, 3);
   const lastThree = blok.partners.slice(3, 6);

@@ -1,4 +1,3 @@
-<!-- TODO: Button component -->
 <template>
   <section
     v-editable="blok"
@@ -14,10 +13,10 @@
           {{ blok.description }}
         </p>
 
-        <a
+        <AppButton
           v-bind:href="blok.cta_link.url || '/'"
-          class="bg-dark text-white py-5 px-8 rounded-[14px] hidden md:inline-block"
-          >{{ blok.cta_text }}</a
+          className="bg-dark text-white hidden md:inline-block hover:bg-transparent hover:text-dark"
+          >{{ blok.cta_text }}</AppButton
         >
 
         <img
@@ -36,10 +35,11 @@
       <p class="text-lg lg:text-xl py-8 md:pr-3 md:hidden">
         {{ blok.description }}
       </p>
-      <a
+
+      <AppButton
         v-bind:href="blok.cta_link.url || '/'"
-        class="bg-dark text-white py-5 px-8 rounded-[14px] block text-center md:hidden"
-        >{{ blok.cta_text }}</a
+        className="bg-dark text-white text-center block md:hidden hover:bg-transparent hover:text-dark"
+        >{{ blok.cta_text }}</AppButton
       >
     </div>
   </section>

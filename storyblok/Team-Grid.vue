@@ -34,9 +34,10 @@ const firstFour = computed(() => blok.columns.slice(0, 4));
     </ClientOnly>
 
     <div class="mt-9 md:mt-10 flex md:justify-end">
-      <a
-        class="bg-dark text-white py-5 px-8 rounded-[14px] text-center w-full md:w-auto md:inline-block"
-        >See more of the team</a
+      <AppButton
+        href="/"
+        className="bg-dark text-white text-center w-full md:w-auto md:inline-block hover:bg-transparent hover:text-dark"
+        >See more of the team</AppButton
       >
     </div>
   </div>
