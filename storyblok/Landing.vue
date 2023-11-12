@@ -19,19 +19,21 @@
           >{{ blok.cta_text }}</AppButton
         >
 
-        <img
+        <!-- <img
           v-bind:src="blok.image.filename"
           v-bind:alt="blok.image.alt"
           class="object-cover w-full h-full md:hidden"
-        />
+        /> -->
+        <LandingImg class="max-w-full md:hidden" />
       </div>
     </div>
     <div class="flex-1">
-      <img
+      <!-- <img
         v-bind:src="blok.image.filename"
         v-bind:alt="blok.image.alt"
         class="object-cover w-full h-full hidden md:block"
-      />
+      /> -->
+      <LandingImg class="max-w-full hidden md:block" />
       <p class="text-lg lg:text-xl py-8 md:pr-3 md:hidden">
         {{ blok.description }}
       </p>
@@ -46,5 +48,6 @@
 </template>
 
 <script setup>
+import LandingImg from "~/components/assets/LandingImg.vue";
 defineProps({ blok: Object });
 </script>

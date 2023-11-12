@@ -19,7 +19,6 @@ export default defineNuxtConfig({
     "@pinia/nuxt",
     "@pinia-plugin-persistedstate/nuxt",
     "nuxt-swiper",
-    "nuxt-svgo",
     [
       "@storyblok/nuxt",
       {

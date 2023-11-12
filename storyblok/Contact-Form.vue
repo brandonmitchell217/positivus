@@ -4,7 +4,9 @@
       class="relative bg-grey rounded-45xl py-[62.5px] px-9 sm:px-[50px] md:px-[100px] flex overflow-hidden"
     >
       <form class="w-full md:w-1/2 max-w-[559px] space-y-10">
-        <div class="flex justify-between md:justify-stretch items-center gap-8">
+        <div
+          class="flex justify-between xs:justify-evenly md:justify-stretch items-center gap-8"
+        >
           <div class="flex flex-row-reverse gap-3.5 items-center">
             <label for="messageCheck" class="text-lg">Say hi</label>
             <input
@@ -166,7 +168,7 @@ defineProps({ blok: Object });
 <style scoped lang="scss">
 #messageCheck,
 #quoteCheck {
-  @apply relative border border-dark;
+  @apply relative border border-dark cursor-pointer;
 
   &::before {
     content: "";

@@ -20,4 +20,8 @@ $grey: #f3f3f3;
   button {
     cursor: pointer;
   }
+
+  .container {
+    @apply px-4 md:px-0;
+  }
 }
