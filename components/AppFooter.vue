@@ -1,7 +1,7 @@
 <template>
   <footer class="mt-28">
     <div
-      class="container pt-[55px] px-[60px] bg-dark text-white text-lg rounded-tl-45xl rounded-tr-45xl text-center lg:text-left"
+      class="lg:container pt-[55px] px-[30px] lg:px-[60px] bg-dark text-white text-lg rounded-none lg:rounded-tl-45xl lg:rounded-tr-45xl text-center lg:text-left"
     >
       <!-- Top -->
       <div
