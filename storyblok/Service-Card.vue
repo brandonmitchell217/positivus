@@ -34,7 +34,7 @@
           >
         </h3>
         <a
-          :class="`w-fit p-4 md:p-0 text-xl leading-7 flex items-center space-x-3.5 group ${
+          :class="`w-fit p-4 md:p-0 text-xl leading-7 flex items-center space-x-3.5 scale-150 md:scale-100 group ${
             blok.background == 'dark' ? 'text-white' : 'text-dark'
           }`"
         >

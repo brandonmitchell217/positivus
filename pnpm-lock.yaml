@@ -41,9 +41,6 @@ devDependencies:
   nuxt-icon:
     specifier: ^0.6.3
     version: 0.6.3(nuxt@3.8.1)(vite@4.5.0)(vue@3.3.8)
-  nuxt-svgo:
-    specifier: ^3.5.6
-    version: 3.5.6
   nuxt-swiper:
     specifier: ^1.2.2
     version: 1.2.2
@@ -6396,29 +6393,6 @@ packages:
       - supports-color
       - vite
       - vue
-    dev: true
-
-  /nuxt-svgo@3.5.6:
-    resolution: {integrity: sha512-DR4/MX0WSrh4+VkmNUvp8Jfa/xzjS7Ca/8MWFbtLyPav/jzlsQE3paCbxoJengL2601D3Dtd3E4rwy7nNCgNTQ==}
-    peerDependencies:
-      svgo-loader: ^4.0.0
-      vue-loader: ^17.0.0
-      vue-svg-loader: 0.17.0-beta.2
-    peerDependenciesMeta:
-      svgo-loader:
-        optional: true
-      vue-loader:
-        optional: true
-      vue-svg-loader:
-        optional: true
-    dependencies:
-      '@nuxt/kit': 3.8.1
-      '@vue/compiler-sfc': 3.3.8
-      mini-svg-data-uri: 1.4.4
-      svgo: 3.0.2
-    transitivePeerDependencies:
-      - rollup
-      - supports-color
     dev: true
 
   /nuxt-swiper@1.2.2:

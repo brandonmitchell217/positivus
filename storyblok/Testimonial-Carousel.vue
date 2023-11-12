@@ -19,9 +19,6 @@
         clickable: true,
       }"
       :breakpoints="{
-        768: {
-          slidesPerView: 1.75,
-        },
         1024: {
           slidesPerView: 1.55,
         },
