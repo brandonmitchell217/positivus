@@ -12,7 +12,7 @@ if (story.value.status) {
 </script>
 
 <template>
-  <section class="pt-20 pb-8">
+  <section class="pt-10 md:pt-20 pb-8">
     <StoryblokComponent v-if="story" :blok="story.content" />
   </section>
 </template>

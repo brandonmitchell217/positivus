@@ -1,7 +1,7 @@
 <template>
   <div
     v-editable="blok"
-    class="caseStudy bg-dark text-white rounded-[45px] py-8 px-[40px] md:px-0 md:py-0 space-y-5 h-[252px] w-[350px] md:h-auto md:w-auto md:max-w-[286px]"
+    class="caseStudy bg-dark text-white rounded-[45px] py-8 px-5 xs:px-[40px] lg:p-0 space-y-5 h-[295px] sm:h-[252px] w-full xs:w-[350px] lg:h-auto lg:w-auto lg:max-w-[286px]"
   >
     <p>{{ blok.text }}</p>
     <a class="text-green flex gap-2 items-center group">
@@ -26,3 +26,28 @@
 <script setup>
 defineProps({ blok: Object });
 </script>
+
+<style scoped lang="scss">
+.caseStudy {
+  position: relative;
+
+  @media (min-width: 768px) {
+    &:not(:last-of-type)::before {
+      content: "";
+      position: absolute;
+      right: -23%;
+      top: 0;
+      transform: translateX(23%);
+      height: 100%;
+      width: 2px;
+      border-radius: 20px;
+      background-color: #ffffff;
+
+      @media (min-width: 1536px) {
+        right: -45%;
+        transform: translateX(45%);
+      }
+    }
+  }
+}
+</style>

@@ -36,7 +36,7 @@
             >
           </h3>
           <a
-            :class="`w-fit p-4 md:p-0 text-xl leading-7 flex items-center space-x-3.5 scale-150 md:scale-100 group ${
+            :class="`w-fit p-4 md:p-0 text-xl leading-7 flex items-center space-x-3.5 group ${
               blok.background == 'dark' ? 'text-white' : 'text-dark'
             }`"
           >
@@ -53,8 +53,6 @@
                 cy="20.5"
                 r="20.5"
                 :fill="blok.background == 'dark' ? '#F3F3F3' : '#191A23'"
-                stroke="currentColor"
-                stroke-width="2"
                 class="md:group-hover:fill-none md:group-hover:stroke-current transition-all duration-300 ease-in-out"
               />
               <path
@@ -116,7 +114,7 @@
           </h3>
           <a
             :href="blok.link || '/'"
-            :class="`w-fit p-4 md:p-0 text-xl leading-7 flex items-center space-x-3.5 scale-150 md:scale-100 group ${
+            :class="`w-fit p-4 md:p-0 text-xl leading-7 flex items-center space-x-3.5 group ${
               blok.background == 'dark' ? 'text-white' : 'text-dark'
             }`"
           >

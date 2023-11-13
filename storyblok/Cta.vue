@@ -1,9 +1,9 @@
 <template>
-  <div v-editable="blok">
+  <div v-editable="blok" class="mt-24 container">
     <div
-      class="mt-24 container bg-grey rounded-[45px] flex flex-col lg:flex-row justify-between items-center"
+      class="bg-grey rounded-[45px] flex flex-col lg:flex-row justify-between items-center"
     >
-      <div class="max-w-[500px] m-[60px] space-y-6">
+      <div class="max-w-[500px] my-[60px] mx-[30px] sm:m-[60px] space-y-6">
         <h4 class="text-3xl">{{ blok.title }}</h4>
         <p>{{ blok.description }}</p>
         <div>
