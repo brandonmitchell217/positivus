@@ -177,3 +177,27 @@
     </defs>
   </svg>
 </template>
+
+<script setup>
+import { gsap } from "gsap";
+
+const item = ref();
+onMounted(() => {
+  gsap.set(item.value, { scale: 0, autoAlpha: 0 });
+  gsap.fromTo(
+    item.value,
+    {
+      scale: 0.4,
+      autoAlpha: 0,
+    },
+    {
+      scale: 1.3,
+      autoAlpha: 1,
+      duration: 3,
+      repeat: -1,
+      yoyo: true,
+    },
+    item.value
+  );
+});
+</script>

@@ -9,6 +9,9 @@ export default defineNuxtConfig({
     },
   },
   css: ["~/assets/scss/main.scss"],
+  build: {
+    transpile: ["gsap"],
+  },
   pages: true,
   modules: [
     "@nuxtjs/tailwindcss",
