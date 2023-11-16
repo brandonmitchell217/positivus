@@ -2,7 +2,7 @@
   <div v-editable="blok" class="pl-4 sm:pl-0">
     <ClientOnly>
       <div
-        v-if="isMobile"
+        v-if="isDesktop"
         class="container hidden md:flex md:px-[60px] md:py-16 rounded-[45px] md:bg-dark text-white justify-center gap-4 md:gap-0 md:justify-between items-center"
       >
         <StoryblokComponent
@@ -11,7 +11,7 @@
           :blok="blok"
         />
       </div>
-    </ClientOnly>
+
 
     <ClientOnly>
       <div v-if="!isMobile">
@@ -35,25 +35,5 @@ import { Swiper, SwiperSlide } from "swiper/vue";
 import "swiper/css";
 import { useMediaQuery } from "@vueuse/core";
 defineProps({ blok: Object });
-const isMobile = useMediaQuery("(min-width: 640px)");
+const isDesktop = useMediaQuery("(min-width: 1024px)");
 </script>
-
-<style scoped lang="scss">
-.caseStudy {
-  position: relative;
-
-  @media (min-width: 768px) {
-    &:not(:last-of-type)::before {
-      content: "";
-      position: absolute;
-      right: -23%;
-      top: 0;
-      transform: translateX(23%);
-      height: 100%;
-      width: 2px;
-      border-radius: 20px;
-      background-color: #ffffff;
-    }
-  }
-}
-</style>

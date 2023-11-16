@@ -5,7 +5,7 @@ const swiper = useSwiper();
 
 <template>
   <div
-    class="absolute z-40 bottom-6 lg:bottom-[60px] left-1/2 -translate-x-1/2 w-[45%] flex justify-between items-center"
+    class="absolute z-40 bottom-6 lg:bottom-[60px] left-1/2 -translate-x-1/2 w-[80%] sm:w-[45%] flex justify-between items-center"
   >
     <button class="swiper-prev group" @click="swiper.slidePrev()">
       <svg

@@ -4,7 +4,7 @@
     class="container flex flex-col md:flex-row justify-center md:justify-stretch"
   >
     <div class="flex-1 space-y-9">
-      <div class="lg:max-w-[80%] space-y-6 md:space-y-0">
+      <div class="lg:max-w-[80%] -space-y-16 md:space-y-0">
         <h1 class="text-5xl lg:text-6xl leading-tight">
           {{ blok.title }}
         </h1>
@@ -34,7 +34,9 @@
         class="object-cover w-full h-full hidden md:block"
       /> -->
       <LandingImg class="max-w-full hidden md:block" />
-      <p class="text-lg lg:text-xl py-8 md:pr-3 md:hidden">
+      <p
+        class="text-lg lg:text-xl -mt-8 xs:mt-0 pb-8 sm:py-8 md:pr-3 md:hidden"
+      >
         {{ blok.description }}
       </p>
 

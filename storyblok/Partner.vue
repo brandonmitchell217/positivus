@@ -57,24 +57,3 @@ const split = computed(() => {
     </div>
   </ClientOnly>
 </template>
-
-<style scoped lang="scss">
-.partner {
-  position: relative;
-
-  &::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #191a23;
-    mix-blend-mode: saturation;
-  }
-
-  &:hover::before {
-    background-color: transparent;
-  }
-}
-</style>

@@ -1,7 +1,7 @@
 <template>
   <div v-editable="blok" class="container">
     <div
-      class="relative bg-grey rounded-45xl py-[62.5px] px-9 sm:px-[50px] md:px-[100px] flex overflow-hidden"
+      class="relative bg-grey rounded-45xl py-[62.5px] px-6 sm:px-[50px] md:px-[100px] flex overflow-hidden"
     >
       <form class="w-full md:w-1/2 max-w-[559px] space-y-10">
         <div
