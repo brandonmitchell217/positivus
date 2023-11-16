@@ -1,3 +1,4 @@
+<!-- Have committed, but have not pushed -->
 <template>
   <svg
     width="594"
@@ -12,6 +13,7 @@
         fill="black"
         stroke="white"
         stroke-miterlimit="10"
+        class="smallStar"
       />
     </g>
     <g clip-path="url(#clip1_119_231)">
@@ -20,6 +22,7 @@
         fill="black"
         stroke="white"
         stroke-miterlimit="10"
+        class="bigStar"
       />
     </g>
     <path
@@ -34,9 +37,9 @@
       d="M524.121 450.681C522.222 454.125 518.683 456.616 513.588 458.161C508.49 459.707 501.878 460.291 493.917 459.948C477.996 459.261 456.795 454.872 431.78 447.216C381.76 431.906 316.598 403.564 248.159 365.813C179.719 328.063 120.986 288.066 81.3534 253.923C61.5339 236.85 46.5118 221.258 37.4382 208.158C32.9008 201.607 29.8674 195.703 28.4556 190.566C27.0444 185.432 27.2641 181.111 29.1637 177.667C31.0632 174.223 34.6015 171.732 39.6969 170.187C44.7946 168.641 51.4067 168.057 59.368 168.4C75.2885 169.087 96.4902 173.476 121.504 181.132C171.525 196.442 236.687 224.784 305.126 262.535C373.566 300.285 432.299 340.283 471.931 374.425C491.751 391.499 506.773 407.091 515.847 420.19C520.384 426.741 523.417 432.645 524.829 437.782C526.24 442.916 526.021 447.237 524.121 450.681Z"
       stroke="black"
     />
-    <circle cx="131.5" cy="92.5" r="15.5" fill="#B9FF66" />
+    <circle cx="131.5" cy="92.5" r="15.5" fill="#B9FF66" class="smallCirc" />
     <circle cx="421" cy="423" r="10" fill="#B9FF66" />
-    <circle cx="81.5" cy="52.5" r="23.5" fill="black" />
+    <circle cx="81.5" cy="52.5" r="23.5" fill="black" class="bigCirc" />
     <path
       d="M305.972 371.59C299.668 373.744 292.464 369.475 289.958 362.071L250.959 247.81L273.747 240.015L312.785 354.433C315.291 361.758 312.237 369.436 305.972 371.59Z"
       fill="black"
@@ -125,10 +128,12 @@
       clip-rule="evenodd"
       d="M518.584 47.8419C518.584 66.8399 534.05 82.2732 553.001 82.2732C571.992 82.2732 587.419 66.8007 587.419 47.8419C587.419 28.844 571.992 13.4106 553.001 13.4106C534.011 13.4106 518.584 28.8832 518.584 47.8419Z"
       fill="#B9FF66"
+      class="dotLineCirc"
     />
     <path
       d="M562.085 51.1713C560.206 51.1713 558.561 52.0723 557.465 53.4824L546.149 49.0561C546.149 48.8994 546.188 48.7819 546.188 48.6252C546.188 48.351 546.149 48.0768 546.11 47.8026L557.7 42.4362C558.757 43.6505 560.323 44.4339 562.085 44.4731C565.296 44.4731 567.958 41.8486 567.958 38.5974C567.958 35.3462 565.335 32.6826 562.085 32.6826C558.874 32.6826 556.212 35.3071 556.212 38.5583C556.212 38.8325 556.251 39.1067 556.29 39.3809L544.7 44.7473C543.643 43.533 542.077 42.7496 540.315 42.7104C537.104 42.7104 534.441 45.3348 534.441 48.586C534.441 51.8372 537.065 54.5009 540.315 54.5009C542.194 54.5009 543.839 53.5999 544.935 52.1898L556.251 56.6161C556.251 56.7728 556.212 56.8903 556.212 57.047C556.212 60.2982 558.835 62.9618 562.085 62.9618C565.296 62.9618 567.958 60.3373 567.958 57.0861C567.919 53.8349 565.296 51.2105 562.085 51.1713Z"
       fill="black"
+      class="dotLine"
     />
     <path
       fill-rule="evenodd"
@@ -173,16 +178,23 @@
 <script setup>
 import { gsap } from "gsap";
 
-const item = ref();
 let tl;
 let playctx;
 let heartctx;
+let lineDotCircctx;
+let lineDotctx;
+let bigStarctx;
+let smallStarctx;
+let bigCircctx;
+let smallCircctx;
+
 onMounted(() => {
   playctx = gsap.context(() => {
     tl = gsap
       .timeline({
         ease: "none",
         repeat: -1,
+        smoothChildTiming: true,
       })
       .to(".playCirc", {
         duration: 3,
@@ -220,6 +232,7 @@ onMounted(() => {
       .timeline({
         ease: "circ.out",
         repeat: -1,
+        smoothChildTiming: true,
       })
       .to(".heartCirc", {
         duration: 2.75,
@@ -245,10 +258,151 @@ onMounted(() => {
         "-=1.75"
       );
   });
+
+  lineDotctx = gsap.context(() => {
+    tl = gsap
+      .timeline({
+        ease: "none",
+        repeat: -1,
+        smoothChildTiming: true,
+      })
+      .to(".dotLine", {
+        duration: 1.75,
+        y: -6,
+      })
+      .to(
+        ".dotLine",
+        {
+          duration: 1.75,
+          y: 0,
+        },
+        "-=0.75"
+      );
+  });
+  lineDotCircctx = gsap.context(() => {
+    tl = gsap
+      .timeline({
+        ease: "none",
+        repeat: -1,
+        smoothChildTiming: true,
+      })
+      .to(".dotLineCirc", {
+        duration: 1.75,
+        y: -6,
+      })
+      .to(
+        ".dotLineCirc",
+        {
+          duration: 1.75,
+          y: 0,
+        },
+        "-=0.75"
+      );
+  });
+  bigStarctx = gsap.context(() => {
+    tl = gsap
+      .timeline({
+        ease: "circ.out",
+        repeat: -1,
+        smoothChildTiming: true,
+      })
+      .to(".bigStar", {
+        duration: 2.75,
+        scale: 1.1,
+        rotate: 45,
+        transformOrigin: "center",
+      })
+      .to(
+        ".bigStar",
+        {
+          duration: 1.75,
+          scale: 1,
+          rotate: 0,
+          transformOrigin: "center",
+        },
+        "-=1.55"
+      );
+  });
+  smallStarctx = gsap.context(() => {
+    tl = gsap
+      .timeline({
+        ease: "circ.out",
+        repeat: -1,
+        smoothChildTiming: true,
+      })
+      .to(".smallStar", {
+        duration: 6.75,
+        x: -150,
+        y: -38,
+        rotate: 185,
+        scale: 0.92,
+        transformOrigin: "center",
+      })
+      .to(
+        ".smallStar",
+        {
+          duration: 6.75,
+          x: 0,
+          y: 0,
+          rotate: 0,
+          scale: 1,
+          transformOrigin: "center",
+        },
+        "-=3.55"
+      );
+  });
+  bigCircctx = gsap.context(() => {
+    tl = gsap
+      .timeline({
+        ease: "circ.out",
+        repeat: -1,
+        smoothChildTiming: true,
+      })
+      .to(".bigCirc", {
+        duration: 2.75,
+        scale: 1.22,
+        rotate: 33,
+      })
+      .to(
+        ".bigCirc",
+        {
+          duration: 1.75,
+          scale: 1,
+          rotate: 0,
+        },
+        "-=1.55"
+      );
+  });
+  smallCircctx = gsap.context(() => {
+    tl = gsap
+      .timeline({
+        ease: "circ.out",
+        repeat: -1,
+        smoothChildTiming: true,
+      })
+      .to(".smallCirc", {
+        duration: 2.75,
+        rotate: 33,
+      })
+      .to(
+        ".smallCirc",
+        {
+          duration: 1.75,
+          rotate: 0,
+        },
+        "-=1.55"
+      );
+  });
 });
 
 onUnmounted(() => {
   playctx.revert(); // <- Easy Cleanup!
-  // heartctx.revert(); // <- Easy Cleanup!
+  heartctx.revert(); // <- Easy Cleanup!
+  lineDotCircctx.revert(); // <- Easy Cleanup!
+  lineDotctx.revert(); // <- Easy Cleanup!
+  bigStarctx.revert(); // <- Easy Cleanup!
+  smallStarctx.revert(); // <- Easy Cleanup!
+  bigCircctx.revert(); // <- Easy Cleanup!
+  smallCircctx.revert(); // <- Easy Cleanup!
 });
 </script>
