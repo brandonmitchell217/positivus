@@ -1,7 +1,7 @@
 <template>
   <div v-editable="blok" class="container">
     <div
-      class="relative h-[554px] lg:h-[625px] bg-dark text-white rounded-45xl px-4 sm:px-0 pt-[30px] pb-0 md:p-0 md:pt-[84px]"
+      class="relative h-[568px] lg:h-[625px] bg-dark text-white rounded-45xl p-[30px] pb-0 md:p-0 md:pt-[84px]"
     >
       <Swiper
         :modules="[Pagination]"

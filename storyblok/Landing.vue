@@ -51,5 +51,6 @@
 
 <script setup>
 import LandingImg from "~/components/assets/LandingImg.vue";
+
 defineProps({ blok: Object });
 </script>

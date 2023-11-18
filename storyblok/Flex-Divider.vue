@@ -1,5 +1,5 @@
 <template>
-  <div v-editable="blok">
+  <div v-editable="blok" class="pl-4 sm:pl-0">
     <ClientOnly>
       <div
         v-if="isDesktop"
@@ -12,11 +12,12 @@
         />
       </div>
 
-      <div v-if="!isDesktop">
+
+    <ClientOnly>
+      <div v-if="!isMobile">
         <Swiper
-          :slides-per-view="1.5"
-          :space-between="20"
-          :centered-slides="true"
+          :slides-per-view="1.15"
+          :space-between="10"
           :mousewheel="true"
           :simulate-touch="true"
         >
