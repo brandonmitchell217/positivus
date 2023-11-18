@@ -12,9 +12,7 @@
         />
       </div>
 
-
-    <ClientOnly>
-      <div v-if="!isMobile">
+      <div v-if="!isDesktop">
         <Swiper
           :slides-per-view="1.15"
           :space-between="10"
