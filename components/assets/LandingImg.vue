@@ -7,22 +7,20 @@
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <g clip-path="url(#clip0_119_231)">
+    <g clip-path="url(#clip0_119_231)" class="smallStar">
       <path
         d="M310.999 420.535L328.6 415.349L323.464 433L328.6 450.601L310.999 445.465L293.348 450.601L298.533 433L293.348 415.349L310.999 420.535Z"
         fill="black"
         stroke="white"
         stroke-miterlimit="10"
-        class="smallStar"
       />
     </g>
-    <g clip-path="url(#clip1_119_231)">
+    <g clip-path="url(#clip1_119_231)" class="bigStar">
       <path
         d="M124.947 333.509L156.423 350.659L124.947 367.947L107.729 399.354L90.5097 367.947L59.0337 350.659L90.5097 333.509L107.729 301.964L124.947 333.509Z"
         fill="black"
         stroke="white"
         stroke-miterlimit="10"
-        class="bigStar"
       />
     </g>
     <path
