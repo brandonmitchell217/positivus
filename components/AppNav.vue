@@ -54,9 +54,9 @@
 
       <ul class="flex gap-10 items-center flex-col">
         <li class="mb-12">
-          <a href="/">
+          <NuxtLink href="/" aria-label="Nav Logo Home Page Link">
             <LogoFooter class="max-w-[180px] md:max-w-none" />
-          </a>
+          </NuxtLink>
         </li>
         <li>
           <a>About us</a>
