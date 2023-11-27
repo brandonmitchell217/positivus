@@ -1,9 +1,9 @@
 <template>
   <nav class="pt-[30px] lg:pt-[60px] text-dark">
     <div class="container flex justify-between items-center">
-      <a href="/">
+      <NuxtLink href="/" aria-label="Nav Logo Home Page Link">
         <LogoNav class="max-w-[140px] md:max-w-none" />
-      </a>
+      </NuxtLink>
 
       <div
         aria-label="menu button"

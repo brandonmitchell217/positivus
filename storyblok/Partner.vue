@@ -20,10 +20,12 @@ const split = computed(() => {
         class="container pt-[60px] lg:pt-[70px] flex space-x-6 lg:space-x-0 justify-between items-center"
       >
         <div v-for="logo in blok.partners" :key="logo.id" class="partner">
-          <img
+          <NuxtImg
             v-bind:src="logo.filename"
             v-bind:alt="logo.alt"
             class="max-w-full block lg:p-3 xl:p-0"
+            width="130"
+            height="56"
           />
         </div>
       </div>
@@ -35,10 +37,12 @@ const split = computed(() => {
           class="relative -right-[10%] xs:m-0 w-[110%] md:w-1/2 space-x-8 flex justify-between items-center"
         >
           <div v-for="logo in split.firstThree" :key="logo.id" class="partner">
-            <img
+            <NuxtImg
               v-bind:src="logo.filename"
               v-bind:alt="logo.alt"
               class="max-w-full block"
+              width="130"
+              height="56"
             />
           </div>
         </div>
@@ -46,10 +50,12 @@ const split = computed(() => {
           class="relative -left-[10%] xs:m-0 w-[110%] md:w-1/2 space-x-8 flex justify-between items-center"
         >
           <div v-for="logo in split.lastThree" :key="logo.id" class="partner">
-            <img
+            <NuxtImg
               v-bind:src="logo.filename"
               v-bind:alt="logo.alt"
               class="max-w-full block"
+              width="130"
+              height="56"
             />
           </div>
         </div>

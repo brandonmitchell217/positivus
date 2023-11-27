@@ -68,12 +68,15 @@
         </div>
 
         <div
-          class="absolute bottom-6 right-6 scale-90 xl:relative xl:bottom-0 xl:right-0 xl:scale-100 xl:flex-1"
+          class="absolute bottom-6 right-6 scale-90 xl:relative xl:bottom-0 xl:right-0 xl:flex-1"
         >
-          <img
+          <NuxtImg
             v-bind:src="blok.image.filename"
             v-bind:alt="blok.image.alt"
-            class="object-cover block"
+            fit="cover"
+            width="260"
+            height="215"
+            class="max-h-[202px]"
           />
         </div>
       </div>
@@ -146,12 +149,15 @@
         </div>
 
         <div
-          class="absolute bottom-6 right-6 scale-90 xl:relative xl:bottom-0 xl:right-0 xl:scale-100 xl:flex-1"
+          class="absolute bottom-6 right-6 scale-90 xl:relative xl:bottom-0 xl:right-0 xl:flex-1"
         >
-          <img
+          <NuxtImg
             v-bind:src="blok.image.filename"
             v-bind:alt="blok.image.alt"
-            class="object-cover block"
+            fit="cover"
+            width="260"
+            height="215"
+            class="max-h-[202px]"
           />
         </div>
       </div>

@@ -7,9 +7,9 @@
       <div
         class="flex flex-col lg:flex-row justify-between items-center space-y-9 lg:space-y-0"
       >
-        <a href="/">
+        <NuxtLink href="/" aria-label="Nav Logo Home Page Link">
           <LogoFooter />
-        </a>
+        </NuxtLink>
 
         <ul
           class="flex flex-col lg:flex-row justify-center items-center space-y-4 lg:space-y-0 lg:space-x-10 underline"
