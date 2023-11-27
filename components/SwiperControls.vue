@@ -7,7 +7,11 @@ const swiper = useSwiper();
   <div
     class="absolute z-40 bottom-6 lg:bottom-[60px] left-1/2 -translate-x-1/2 w-[80%] sm:w-[45%] flex justify-between items-center"
   >
-    <button class="swiper-prev group" @click="swiper.slidePrev()">
+    <button
+      class="swiper-prev group"
+      @click="swiper.slidePrev()"
+      aria-label="Previous Carousel Slide Button"
+    >
       <svg
         width="24"
         height="24"
@@ -25,7 +29,11 @@ const swiper = useSwiper();
     <div>
       <div class="swiper-pagination space-x-4"></div>
     </div>
-    <button class="swiper-next group" @click="swiper.slideNext()">
+    <button
+      class="swiper-next group"
+      @click="swiper.slideNext()"
+      aria-label="Next Carousel Slide Button"
+    >
       <svg
         width="24"
         height="24"

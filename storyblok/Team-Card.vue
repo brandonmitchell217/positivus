@@ -5,10 +5,12 @@
   >
     <div class="space-y-7">
       <div class="relative flex items-end gap-3">
-        <img
+        <NuxtImg
           v-bind:src="blok.image.filename"
           v-bind:alt="blok.image.alt"
           class="max-w-full block"
+          width="103"
+          height="103"
         />
         <div>
           <h5 class="text-xl">{{ blok.name }}</h5>
