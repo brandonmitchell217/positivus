@@ -1,7 +1,7 @@
 <template>
   <footer class="mt-28">
     <div
-      class="lg:container pt-[55px] px-[30px] lg:px-[60px] bg-dark text-white text-lg rounded-none lg:rounded-tl-45xl lg:rounded-tr-45xl text-center lg:text-left"
+      class="lg:container relative pt-[55px] px-[30px] lg:px-[60px] bg-dark text-white text-lg rounded-none lg:rounded-tl-45xl lg:rounded-tr-45xl text-center lg:text-left"
     >
       <!-- Top -->
       <div
@@ -114,6 +114,25 @@
       >
         <p>© 2023 Positivus. All Rights Reserved.</p>
         <a class="underline">Privacy Policy</a>
+      </div>
+
+      <div
+        class="absolute bottom-0 left-0 right-0 bg-green text-dark text-xs xs:text-sm flex justify-around items-center py-1"
+      >
+        <p>
+          Design by
+          <a class="hover:underline" href="https://olgaaverchenko.gumroad.com/"
+            >Olga Averchenko</a
+          >
+        </p>
+        <p>
+          Developed by
+          <a
+            class="hover:underline"
+            href="https://www.brandon-mitchell.dev/?ref=positivus"
+            >Brandon</a
+          >
+        </p>
       </div>
     </div>
   </footer>

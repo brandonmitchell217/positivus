@@ -73,10 +73,9 @@
           <NuxtImg
             v-bind:src="blok.image.filename"
             v-bind:alt="blok.image.alt"
-            fit="cover"
+            fit="contain"
             width="260"
             height="215"
-            class="max-h-[202px]"
           />
         </div>
       </div>
@@ -154,10 +153,9 @@
           <NuxtImg
             v-bind:src="blok.image.filename"
             v-bind:alt="blok.image.alt"
-            fit="cover"
+            fit="contain"
             width="260"
             height="215"
-            class="max-h-[202px]"
           />
         </div>
       </div>
