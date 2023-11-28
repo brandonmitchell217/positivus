@@ -121,15 +121,19 @@
       >
         <p>
           Design by
-          <a class="hover:underline" href="https://olgaaverchenko.gumroad.com/"
+          <a
+            target="_blank"
+            href="https://olgaaverchenko.gumroad.com/"
+            class="hover:underline"
             >Olga Averchenko</a
           >
         </p>
         <p>
           Developed by
           <a
-            class="hover:underline"
+            target="_blank"
             href="https://www.brandon-mitchell.dev/?ref=positivus"
+            class="hover:underline"
             >Brandon</a
           >
         </p>
