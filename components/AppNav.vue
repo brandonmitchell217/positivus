@@ -88,6 +88,20 @@ import LogoNav from "./assets/LogoNav.vue";
 import LogoFooter from "./assets/LogoFooter.vue";
 import { Icon } from "@iconify/vue";
 const isOpen = ref(false);
+
+const escapeKeyHandler = (event) => {
+  if (event.key === "Escape" && isOpen.value) {
+    isOpen.value = false;
+  }
+};
+
+onMounted(() => {
+  document.addEventListener("keydown", escapeKeyHandler);
+});
+
+onBeforeUnmount(() => {
+  document.removeEventListener("keydown", escapeKeyHandler);
+});
 </script>
 
 <style scoped lang="scss">
