@@ -4,7 +4,7 @@
     :class="`w-full accordionBox p-[30px] lg:py-[41px] lg:px-[60px] border border-dark rounded-[45px] cursor-pointer group transition-all duration-300 ease-in-out ${
       isOpen ? 'bg-green' : 'bg-grey'
     }`"
-    @click="isOpen = !isOpen"
+    @click="toggleAccordion"
   >
     <div class="flex justify-between items-center">
       <div class="flex items-center gap-7 lg:gap-6">
@@ -56,9 +56,12 @@
 </template>
 
 <script setup>
-defineProps({ blok: Object });
+const { blok, isOpen } = defineProps(["blok", "isOpen"]);
+const emit = defineEmits();
 
-const isOpen = ref(false);
+const toggleAccordion = () => {
+  emit("toggleAccordion");
+};
 </script>
 
 <style scoped lang="scss">
