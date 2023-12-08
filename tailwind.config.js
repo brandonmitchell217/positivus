@@ -36,6 +36,9 @@ module.exports = {
         "xl.5": "0.875rem",
       },
     },
+    animation: {
+      "spin-slow": "spin 3s linear infinite",
+    },
   },
   corePlugins: {
     aspectRatio: false,
