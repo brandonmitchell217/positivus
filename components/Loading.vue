@@ -42,7 +42,7 @@ import { gsap } from "gsap";
 
 onMounted(() => {
   gsap.set(".above", { fill: "transparent" });
-  gsap.set(".text", { autoAlpha: 0, opacity: 0 });
+  gsap.set(".text", { autoAlpha: 0, opacity: 0, scale: 0 });
   gsap.fromTo(
     ".above path",
     { fill: "transparent" },
@@ -57,8 +57,15 @@ onMounted(() => {
   gsap.to(".above", { duration: 1, delay: 1.95, rotate: 180 });
   gsap.fromTo(
     ".text",
-    { autoAlpha: 0, opacity: 0 },
-    { autoAlpha: 1, opacity: 1, duration: 1, delay: 2.95, ease: "power2.out" }
+    { autoAlpha: 0, opacity: 0, scale: 0 },
+    {
+      autoAlpha: 1,
+      opacity: 1,
+      duration: 1,
+      scale: 1,
+      delay: 2.95,
+      ease: "power2.out",
+    }
   );
   gsap.to(".loading", {
     duration: 0.75,
