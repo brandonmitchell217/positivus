@@ -33,7 +33,7 @@
       </svg>
     </div>
 
-    <span class="text text-[6vw]">Positivus</span>
+    <span class="text opacity-0 text-[6vw]">Positivus</span>
   </div>
 </template>
 
@@ -41,9 +41,12 @@
 import { gsap } from "gsap";
 
 onMounted(() => {
-  gsap.set(".above", { fill: "transparent" });
-  gsap.set(".text", { autoAlpha: 0, opacity: 0, scale: 0 });
-  gsap.fromTo(
+  // write this gsap as a timeline
+  const tl = gsap.timeline();
+  tl.set(".above", { fill: "transparent" });
+  tl.set(".text", { autoAlpha: 0, opacity: 0, scale: 0 });
+
+  tl.fromTo(
     ".above path",
     { fill: "transparent" },
     {
@@ -53,43 +56,24 @@ onMounted(() => {
       clipRule: "evenodd",
       duration: 1.95,
     }
-  );
-  gsap.to(".above", { duration: 1, delay: 1.95, rotate: 180 });
-  gsap.fromTo(
-    ".text",
-    { autoAlpha: 0, opacity: 0, scale: 0 },
-    {
-      autoAlpha: 1,
-      opacity: 1,
-      duration: 1,
-      scale: 1,
-      delay: 2.95,
+  )
+    .to(".above", { duration: 1, rotate: 180 })
+    .fromTo(
+      ".text",
+      { autoAlpha: 0, opacity: 0, scale: 0 },
+      {
+        autoAlpha: 1,
+        opacity: 1,
+        duration: 1,
+        scale: 1,
+        ease: "power2.out",
+      }
+    )
+    .to(".loading", {
+      duration: 0.75,
+      scaleY: 0,
+      transformOrigin: "top",
       ease: "power2.out",
-    }
-  );
-  gsap.to(".loading", {
-    duration: 0.75,
-    delay: 3.95,
-    scaleY: 0,
-    transformOrigin: "top",
-    ease: "power2.out",
-  });
+    });
 });
 </script>
-
-<style scoped lang="scss">
-// svg {
-//   path {
-//     animation: bgFill 1.95s linear;
-
-//     @keyframes bgFill {
-//       0% {
-//         fill: transparent;
-//       }
-//       100% {
-//         fill: black;
-//       }
-//     }
-//   }
-// }
-</style>
