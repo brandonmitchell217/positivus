@@ -82,7 +82,7 @@
     </a>
     <div
       v-if="isDesktop"
-      :class="`serviceCard relative max-w-[600px] w-full p-[50px] rounded-[45px] border border-dark ${
+      :class="`serviceCard relative h-[343px] max-w-[600px] w-full p-[50px] rounded-[45px] border border-dark ${
         blok.background == 'grey'
           ? 'bg-grey'
           : blok.background == 'green'
