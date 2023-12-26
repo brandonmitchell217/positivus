@@ -33,6 +33,7 @@
       </svg>
     </div>
 
+    <!-- TODO: Fix the size mobile -->
     <span class="text opacity-0 text-[6vw]">Positivus</span>
   </div>
 </template>

@@ -148,14 +148,13 @@
         </div>
 
         <div
-          class="absolute bottom-6 right-6 scale-90 xl:relative xl:bottom-0 xl:right-0 xl:flex-1"
+          class="absolute left-[60%] top-1/2 -translate-y-1/2 -translate-x-[60%]"
         >
           <NuxtImg
             v-bind:src="blok.image.filename"
             v-bind:alt="blok.image.alt"
-            fit="contain"
-            width="260"
-            height="215"
+            fit="fill"
+            class="scale-[2.25]"
           />
         </div>
       </div>
